@@ -29,6 +29,7 @@ func main() {
 	//√ 当被go调用的函数返回时，这个goroutine也自动结束了。如果这个函数有返回值，那么这个返回值会被丢弃。
 	//√ golang程序从main()函数开始执行，当main()函数返回时，程序结束且不等待其他goroutine结束。
 	fmt.Println("-----------------------------------------------------")
+	go hello()
 	go numbers()
 	go alphabets()
 	time.Sleep(3000 * time.Millisecond)
