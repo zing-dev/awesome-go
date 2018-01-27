@@ -35,4 +35,21 @@ func main() {
 
 	fmt.Printf("%08b\n", x<<1) // "01000100", the set {2, 6}
 	fmt.Printf("%08b\n", x>>1) // "00010001", the set {0, 4}
+
+
+	f := 3.141 // a float64
+	fi := int(f)
+	fmt.Println(f, fi) // "3.141 3"
+	f = 1.99
+	fmt.Println(int(f)) // "1"
+	fmt.Println(0x1111111)
+	fmt.Println(0xf1111111)
+
+	ascii := 'a'
+	unicode := '国'
+	newline := '\n'
+	fmt.Printf("%d %[1]c %[1]q\n", ascii)   // "97 a 'a'"
+	fmt.Printf("%d %[1]c %[1]q\n", unicode) // "22269 国 '国'"
+	fmt.Printf("%d %[1]q\n", newline)       // "10 '\n'"
+	fmt.Printf("%c",22269)
 }
