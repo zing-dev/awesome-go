@@ -42,13 +42,13 @@ func main() {
 	fmt.Println(f2())
 	fmt.Println(f2())
 
-	for i, course := range topoSort(prereqs) {
+	for i, course := range todoSort(prereqs) {
 		fmt.Printf("%d:\t%s\n", i+1, course)
 	}
 
 }
 
-func topoSort(m map[string][]string) []string {
+func todoSort(m map[string][]string) []string {
 	var order []string
 	seen := make(map[string]bool)
 	var visitAll func(items []string)

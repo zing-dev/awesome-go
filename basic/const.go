@@ -1,8 +1,8 @@
 package main
 
 import (
-	"math"
 	"fmt"
+	"math"
 	"time"
 )
 
@@ -30,6 +30,7 @@ func main() {
 	)
 
 	fmt.Println(e)
+	fmt.Printf("%.20f\n", e)
 	fmt.Println(e2)
 	fmt.Println(pi)
 
@@ -55,4 +56,11 @@ func main() {
 	SetBroadcast(&v)
 	fmt.Printf("%b %t\n", v, IsUp(v))   // "10010 false"
 	fmt.Printf("%b %t\n", v, IsCast(v)) // "10010 true"
+
+	fmt.Printf("%v\n", FlagUp)
+	fmt.Printf("%v\n", FlagBroadcast)
+	fmt.Printf("%v\n", FlagLoopback)
+	fmt.Printf("%v\n", FlagPointToPoint)
+	fmt.Printf("%v\n", FlagMulticast)
+	fmt.Printf("%v\n", Flags())
 }
